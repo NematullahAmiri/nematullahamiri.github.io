@@ -12,102 +12,57 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-/* ===== RESET & VARIABLES ===== */
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --primary-dark: #0a192f;
-    --primary-deep: #112240;
-    --accent-blue: #64ffda;
-    --accent-teal: #5ee0fa;
-    --text-light: #ccd6f6;
-    --text-lighter: #8892b0;
-    --bg-light: #f0f4f8;
-    --card-bg: #ffffff;
-    --text-dark: #1e2a3e;
-    --shadow-sm: 0 10px 30px -10px rgba(0,0,0,0.1);
-    --shadow-hover: 0 20px 35px -12px rgba(0,0,0,0.2);
-    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-}
-
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.65;
+    background: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    border-radius: 14px;
 }
 
 .container {
     width: 90%;
-    max-width: 1280px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: auto;
 }
 
 section {
-    padding: 100px 0;
+    padding: 90px 0;
 }
 
 h1, h2, h3 {
-    font-weight: 700;
     line-height: 1.2;
-    letter-spacing: -0.02em;
 }
 
 h2 {
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
-    color: var(--primary-dark);
-    position: relative;
-    display: inline-block;
-}
-
-h2:after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--accent-blue), var(--accent-teal));
-    border-radius: 2px;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0f172a;
 }
 
 .section-subtitle {
-    font-size: 1.2rem;
-    color: #4a5568;
-    margin-bottom: 3rem;
-    max-width: 700px;
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-up {
-    animation: fadeInUp 0.7s ease forwards;
+    max-width: 750px;
+    color: #475569;
+    margin-bottom: 50px;
 }
 
 /* ===== NAVBAR ===== */
@@ -115,180 +70,124 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(10, 25, 47, 0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(100, 255, 218, 0.15);
-    transition: var(--transition);
+    background: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 18px 0;
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 20px;
     font-weight: 800;
-    background: linear-gradient(135deg, #fff, var(--accent-blue));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    letter-spacing: -0.02em;
+    color: white;
 }
 
 .nav-links a {
-    color: var(--text-light);
+    color: white;
     text-decoration: none;
-    margin-left: 2rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: var(--transition);
-    position: relative;
-}
-
-.nav-links a:before {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--accent-blue);
-    transition: var(--transition);
-}
-
-.nav-links a:hover:before {
-    width: 100%;
+    margin-left: 24px;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: var(--accent-blue);
+    opacity: 0.8;
 }
 
 /* ===== HERO ===== */
 .hero {
-    background: linear-gradient(135deg, #0a192f 0%, #0d2b4e 100%);
+    background: linear-gradient(135deg, #07152b, #123d75);
     color: white;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(100,255,218,0.08) 0%, transparent 50%);
+    padding: 120px 0 110px;
 }
 
 .hero-grid {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
+    gap: 50px;
     align-items: center;
-    position: relative;
-    z-index: 2;
 }
 
 .hero h1 {
-    font-size: 3.8rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
-.hero-highlight {
-    color: var(--accent-blue);
-    border-bottom: 2px solid rgba(100,255,218,0.4);
+    font-size: 58px;
+    margin-bottom: 25px;
 }
 
 .hero p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    margin-bottom: 2rem;
+    font-size: 18px;
+    max-width: 700px;
+    color: #d7e1f0;
+    margin-bottom: 35px;
+}
+
+.hero-highlight {
+    color: #93c5fd;
 }
 
 .hero-badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-bottom: 2rem;
+    gap: 12px;
+    margin-bottom: 35px;
 }
 
 .badge {
-    background: rgba(100,255,218,0.12);
-    backdrop-filter: blur(4px);
-    padding: 0.5rem 1.2rem;
-    border-radius: 40px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    border: 1px solid rgba(100,255,218,0.2);
+    background: rgba(255,255,255,0.1);
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 14px;
 }
 
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .btn {
     text-decoration: none;
-    padding: 0.9rem 2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: var(--transition);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    border: none;
-    font-size: 0.95rem;
+    padding: 14px 26px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: 0.3s;
+    display: inline-block;
 }
 
 .btn-primary {
-    background: var(--accent-blue);
-    color: #0a192f;
+    background: white;
+    color: #0b2345;
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px -5px rgba(100,255,218,0.4);
-    background: #7effe6;
+    transform: translateY(-2px);
 }
 
 .btn-outline {
-    border: 1px solid var(--accent-blue);
-    background: transparent;
-    color: var(--accent-blue);
+    border: 2px solid rgba(255,255,255,0.35);
+    color: white;
 }
 
 .btn-outline:hover {
-    background: rgba(100,255,218,0.1);
-    transform: translateY(-3px);
+    background: rgba(255,255,255,0.08);
 }
 
 .hero-card {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.08);
+    padding: 35px;
+    border-radius: 22px;
     backdrop-filter: blur(12px);
-    padding: 2rem;
-    border-radius: 24px;
-    border: 1px solid rgba(100,255,218,0.2);
-    transition: var(--transition);
-}
-
-.hero-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(100,255,218,0.5);
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
 .hero-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.2rem;
-    color: var(--accent-blue);
+    margin-bottom: 20px;
+    font-size: 24px;
 }
 
 .hero-card ul {
@@ -296,284 +195,248 @@ nav {
 }
 
 .hero-card li {
-    margin-bottom: 0.8rem;
-    color: var(--text-light);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.hero-card li:before {
-    content: '▹';
-    color: var(--accent-blue);
+    margin-bottom: 14px;
+    color: #dbeafe;
 }
 
 /* ===== TRUST SECTION ===== */
 .trust-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
 .trust-card {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow-sm);
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
     text-align: center;
-    transition: var(--transition);
-    border: 1px solid rgba(0,0,0,0.03);
-}
-
-.trust-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-hover);
 }
 
 .trust-card h3 {
-    color: var(--primary-dark);
-    margin-bottom: 0.8rem;
-    font-size: 1.3rem;
+    color: #0f172a;
+    margin-bottom: 12px;
 }
 
-/* ===== ABOUT & CARDS ===== */
-.about-grid, .services-grid, .contact-grid {
+/* ===== ABOUT ===== */
+.about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
 }
 
-.about-card, .service-card, .contact-card {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
-    height: 100%;
+.about-card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
 }
 
-.about-card:hover, .service-card:hover, .contact-card:hover {
+.about-card h3 {
+    margin-bottom: 20px;
+}
+
+/* ===== SERVICES ===== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    transition: 0.3s;
+}
+
+.service-card:hover {
     transform: translateY(-6px);
-    box-shadow: var(--shadow-hover);
 }
 
-.about-card h3, .service-card h3, .contact-card h3 {
-    margin-bottom: 1.2rem;
-    color: var(--primary-dark);
-    font-size: 1.5rem;
+.service-card h3 {
+    margin-bottom: 18px;
+    color: #0f172a;
 }
 
-.about-card ul, .service-card ul {
-    padding-left: 1.2rem;
-    color: #4a5568;
-}
-
-.about-card li, .service-card li {
-    margin-bottom: 0.5rem;
+.service-card ul {
+    padding-left: 18px;
+    color: #475569;
 }
 
 /* ===== PROJECTS ===== */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 2rem;
+    gap: 28px;
 }
 
 .project-card {
-    background: var(--card-bg);
+    background: white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+    transition: 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
-}
-
-.project-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.project-card:hover img {
-    transform: scale(1.05);
+    transform: translateY(-6px);
 }
 
 .project-content {
-    padding: 1.8rem;
+    padding: 28px;
 }
 
 .project-tag {
     display: inline-block;
-    background: linear-gradient(135deg, rgba(100,255,218,0.2), rgba(94,224,250,0.1));
-    color: #0f172a;
-    font-size: 0.75rem;
-    padding: 0.3rem 0.9rem;
-    border-radius: 20px;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    border-left: 2px solid var(--accent-blue);
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.project-content h3 {
+    margin-bottom: 16px;
 }
 
 .project-list {
-    margin: 1rem 0;
-    padding-left: 1.2rem;
-    color: #4a5568;
+    margin: 20px 0;
+    padding-left: 18px;
+    color: #475569;
 }
 
 .tech-stack {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-    color: var(--primary-dark);
-    background: #eef2f6;
-    display: inline-block;
-    padding: 0.2rem 0.8rem;
-    border-radius: 20px;
+    margin-top: 18px;
+    font-size: 14px;
+    color: #334155;
 }
 
 .project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
+    display: inline-block;
+    margin-top: 22px;
     text-decoration: none;
     font-weight: 700;
-    color: var(--primary-dark);
-    transition: var(--transition);
-}
-
-.project-link i {
-    transition: transform 0.2s;
-}
-
-.project-link:hover {
-    color: var(--accent-blue);
-    gap: 0.8rem;
+    color: #0f172a;
 }
 
 /* ===== CTA ===== */
 .cta {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary-deep));
+    background: linear-gradient(135deg, #0b2345, #123d75);
     color: white;
     text-align: center;
-    border-radius: 28px;
-    padding: 4rem 2rem;
-    box-shadow: var(--shadow-sm);
+    border-radius: 24px;
+    padding: 70px 30px;
 }
 
 .cta h2 {
     color: white;
-}
-
-.cta h2:after {
-    background: var(--accent-blue);
-    left: 50%;
-    transform: translateX(-50%);
+    margin-bottom: 20px;
 }
 
 .cta p {
-    max-width: 600px;
-    margin: 1.5rem auto;
-    color: var(--text-light);
+    max-width: 700px;
+    margin: auto auto 35px;
+    color: #d7e1f0;
 }
 
-/* ===== CONTACT FORM ===== */
-.contact-form {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow-sm);
+/* ===== CONTACT ===== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
 }
 
-.form-group {
-    margin-bottom: 1.2rem;
+.contact-card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
 }
 
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    font-family: inherit;
-    transition: var(--transition);
+.contact-card h3 {
+    margin-bottom: 16px;
 }
 
-.form-group input:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-blue);
-    box-shadow: 0 0 0 3px rgba(100,255,218,0.2);
+.contact-card a {
+    text-decoration: none;
+    color: #1d4ed8;
+    word-break: break-word;
 }
 
 /* ===== FOOTER ===== */
 footer {
-    background: var(--primary-dark);
-    color: var(--text-lighter);
+    background: #07152b;
+    color: #cbd5e1;
     text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
-    border-top: 1px solid rgba(100,255,218,0.1);
+    padding: 30px 20px;
+    margin-top: 80px;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .hero h1 {
-        font-size: 2.8rem;
-    }
-    .nav-wrapper {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .nav-links a {
-        margin: 0 0.8rem;
-    }
-    section {
-        padding: 60px 0;
-    }
-    h2 {
-        font-size: 2.2rem;
-    }
+
+.hero-grid {
+    grid-template-columns: 1fr;
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.nav-wrapper {
+    flex-direction: column;
+    gap: 18px;
+}
+
+.nav-links {
+    text-align: center;
+}
+
+.nav-links a {
+    margin: 0 10px;
+}
+
 }
 
 @media (max-width: 600px) {
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    .hero-badges {
-        gap: 0.5rem;
-    }
-    .badge {
-        font-size: 0.7rem;
-    }
-    .btn {
-        padding: 0.7rem 1.5rem;
-    }
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+
+.hero {
+    padding: 90px 0;
 }
+
+.hero h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
 <!-- ===== NAVIGATION ===== -->
 <nav>
 <div class="container nav-wrapper">
-<div class="logo">NAmiri</div>
+<div class="logo">Nematullah Amiri</div>
+
 <div class="nav-links">
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
-<a href="https://www.linkedin.com/in/nematullah-amiri-12b50941" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://github.com/NematullahAmiri" target="_blank"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/in/nematullah-amiri-12b50941" target="_blank">LinkedIn</a>
+<a href="https://github.com/NematullahAmiri" target="_blank">GitHub</a>
 </div>
 </div>
 </nav>
@@ -581,42 +444,73 @@ footer {
 <!-- ===== HERO ===== -->
 <section class="hero">
 <div class="container hero-grid">
-<div class="fade-up">
-<h1>Business Intelligence & <span class="hero-highlight">Project Analytics</span> Consultant</h1>
-<p>Helping organizations transform operational data into strategic decisions through analytics, dashboards, and forecasting.</p>
+
+<div>
+<h1>
+Business Intelligence & <span class="hero-highlight">Project Analytics</span> Consultant
+</h1>
+
+<p>
+Helping organizations transform operational data into strategic decisions through analytics, dashboards, forecasting, and reporting automation.
+</p>
+
 <div class="hero-badges">
-<span class="badge">PMP® Certified</span>
-<span class="badge">14+ Years Experience</span>
-<span class="badge">Data Analytics</span>
-<span class="badge">Business Intelligence</span>
+<div class="badge">PMP® Certified</div>
+<div class="badge">14+ Years Experience</div>
+<div class="badge">Data Analytics</div>
+<div class="badge">Business Intelligence</div>
+<div class="badge">PMO Strategy</div>
 </div>
+
 <div class="hero-buttons">
-<a href="#projects" class="btn btn-primary"><i class="fas fa-chart-line"></i> View Portfolio</a>
-<a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Hire Me</a>
+<a href="#projects" class="btn btn-primary">View Portfolio</a>
+<a href="#contact" class="btn btn-outline">Hire Me</a>
 </div>
 </div>
-<div class="hero-card fade-up">
-<h3>What I Deliver</h3>
+
+<div class="hero-card">
+<h3>What I Help Organizations With</h3>
 <ul>
-<li>Executive dashboards & KPI reporting</li>
-<li>Data analytics & forecasting solutions</li>
-<li>Project risk analysis & PMO reporting</li>
-<li>Reporting automation & transformation</li>
+<li>✔ Executive dashboards & KPI reporting</li>
+<li>✔ Data analytics & forecasting solutions</li>
+<li>✔ Project risk analysis & PMO reporting</li>
+<li>✔ Business intelligence & operational insights</li>
+<li>✔ Reporting automation & data transformation</li>
+<li>✔ Strategic analytics for decision-making</li>
 </ul>
 </div>
+
 </div>
 </section>
 
 <!-- ===== TRUST ===== -->
 <section>
 <div class="container">
-<h2>Trusted By</h2>
-<p class="section-subtitle">Collaborating with leading organizations worldwide</p>
+<h2>Trusted Professional Experience</h2>
+<p class="section-subtitle">
+Experienced in delivering analytics, consulting, and project leadership support for international development organizations, government institutions, and consulting firms.
+</p>
+
 <div class="trust-grid">
-<div class="trust-card"><h3>USAID / Deloitte</h3><p>Project coordination & operational support</p></div>
-<div class="trust-card"><h3>Adam Smith Intl.</h3><p>Public financial management</p></div>
-<div class="trust-card"><h3>Government Institutions</h3><p>Performance monitoring</p></div>
-<div class="trust-card"><h3>International Consulting</h3><p>Cross-functional delivery</p></div>
+<div class="trust-card">
+<h3>USAID / Deloitte</h3>
+<p>Project coordination, reporting, and operational support.</p>
+</div>
+
+<div class="trust-card">
+<h3>Adam Smith International</h3>
+<p>Public financial management and strategic support initiatives.</p>
+</div>
+
+<div class="trust-card">
+<h3>Government Institutions</h3>
+<p>Performance monitoring, policy support, and operational coordination.</p>
+</div>
+
+<div class="trust-card">
+<h3>International Consulting</h3>
+<p>Cross-functional collaboration and project delivery management.</p>
+</div>
 </div>
 </div>
 </section>
@@ -625,21 +519,35 @@ footer {
 <section id="about">
 <div class="container">
 <h2>About Me</h2>
-<p class="section-subtitle">Bridging analytics and strategy for data-driven decisions</p>
+<p class="section-subtitle">
+I combine business intelligence, analytics, and project leadership to help organizations make better operational and strategic decisions.
+</p>
+
 <div class="about-grid">
+
 <div class="about-card">
 <h3>Professional Background</h3>
-<p>PMP-certified with 14+ years in data analytics, project management, and consulting. I help organizations turn complex data into clear strategic actions.</p>
+<p>
+I am a PMP-certified professional with 14+ years of experience working across data analytics, project management, consulting, and public financial management.
+</p>
+<br>
+<p>
+My experience includes supporting international development programs, government institutions, and operational initiatives requiring data-driven decision-making and performance optimization.
+</p>
 </div>
+
 <div class="about-card">
 <h3>Core Expertise</h3>
 <ul>
 <li>Business Intelligence & KPI Dashboards</li>
 <li>Data Analytics & Forecasting</li>
 <li>Project Risk Analytics</li>
+<li>Executive Reporting Systems</li>
+<li>Operational Performance Analysis</li>
 <li>SQL, Python, Power BI & Excel</li>
 </ul>
 </div>
+
 </div>
 </div>
 </section>
@@ -648,12 +556,52 @@ footer {
 <section id="services">
 <div class="container">
 <h2>Professional Services</h2>
-<p class="section-subtitle">Tailored analytics solutions for measurable impact</p>
+<p class="section-subtitle">
+Practical analytics and reporting solutions designed to improve visibility, efficiency, and business decision-making.
+</p>
+
 <div class="services-grid">
-<div class="service-card"><h3>📊 BI & Dashboards</h3><ul><li>Executive KPI dashboards</li><li>Power BI reporting</li><li>Performance monitoring</li></ul></div>
-<div class="service-card"><h3>📈 Data & Forecasting</h3><ul><li>Trend analysis</li><li>Predictive analytics</li><li>Business forecasting</li></ul></div>
-<div class="service-card"><h3>⚠️ Project Risk Analytics</h3><ul><li>Risk prediction</li><li>PMO reporting</li><li>Performance tracking</li></ul></div>
-<div class="service-card"><h3>🤖 Reporting Automation</h3><ul><li>Excel automation</li><li>SQL reporting</li><li>Workflow optimization</li></ul></div>
+
+<div class="service-card">
+<h3>Business Intelligence & Dashboards</h3>
+<ul>
+<li>Executive KPI dashboards</li>
+<li>Power BI reporting systems</li>
+<li>Performance monitoring</li>
+<li>Interactive business insights</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h3>Data Analytics & Forecasting</h3>
+<ul>
+<li>Trend analysis</li>
+<li>Predictive analytics</li>
+<li>Business forecasting</li>
+<li>Decision-support analytics</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h3>Project & Risk Analytics</h3>
+<ul>
+<li>Project risk prediction</li>
+<li>PMO reporting systems</li>
+<li>Performance tracking</li>
+<li>Operational risk analysis</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h3>Reporting Automation</h3>
+<ul>
+<li>Excel automation</li>
+<li>SQL-based reporting</li>
+<li>Data cleaning & transformation</li>
+<li>Workflow optimization</li>
+</ul>
+</div>
+
 </div>
 </div>
 </section>
@@ -661,39 +609,113 @@ footer {
 <!-- ===== PROJECTS ===== -->
 <section id="projects">
 <div class="container">
-<h2>Featured Projects</h2>
-<p class="section-subtitle">Real-world analytics delivering business value</p>
+<h2>Featured Analytics Projects</h2>
+<p class="section-subtitle">
+Business-focused analytics projects demonstrating forecasting, operational intelligence, risk analytics, and decision-support capabilities.
+</p>
+
 <div class="projects-grid">
+
+<!-- PROJECT 1 -->
 <div class="project-card">
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format" alt="Dashboard">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" alt="Dashboard analytics visualization">
+
 <div class="project-content">
-<span class="project-tag">Project Analytics</span>
-<h3>Project Risk Prediction</h3>
-<ul class="project-list"><li>ML models to identify risk patterns</li><li>Proactive monitoring</li><li>Driver impact analysis</li></ul>
-<p class="tech-stack">Python, XGBoost, SHAP</p>
-<a class="project-link" href="https://github.com/NematullahAmiri/project-risk-prediction" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+<div class="project-tag">Project Analytics</div>
+
+<h3>Project Risk Prediction Analysis</h3>
+
+<ul class="project-list">
+<li>Developed ML models to identify project risk patterns</li>
+<li>Enabled proactive project monitoring and decision-making</li>
+<li>Analyzed key drivers impacting project performance</li>
+</ul>
+
+<p class="tech-stack">
+<strong>Tools:</strong> Python, Scikit-learn, XGBoost, Random Forest, SHAP
+</p>
+
+<a class="project-link" href="https://github.com/NematullahAmiri/project-risk-prediction" target="_blank">
+View Project →
+</a>
 </div>
 </div>
+
+<!-- PROJECT 2 -->
 <div class="project-card">
-<img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1200&auto=format" alt="Economic">
+<img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1200&auto=format&fit=crop" alt="Global economic analysis">
+
 <div class="project-content">
-<span class="project-tag">Economic Analytics</span>
-<h3>IMF World Economic Outlook</h3>
-<ul class="project-list"><li>199 countries analysis</li><li>Recession risk models</li><li>Policy recommendations</li></ul>
-<p class="tech-stack">Python, Pandas, Scikit-learn</p>
-<a class="project-link" href="https://github.com/NematullahAmiri/IMF-World-Economic-Outlook--2026" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+<div class="project-tag">Economic Analytics</div>
+
+<h3>IMF World Economic Outlook Analysis</h3>
+
+<ul class="project-list">
+<li>Analyzed economic indicators across 199 countries</li>
+<li>Built recession risk prediction and classification models</li>
+<li>Delivered policy-oriented analytical recommendations</li>
+</ul>
+
+<p class="tech-stack">
+<strong>Tools:</strong> Python, Pandas, Scikit-learn, Gradient Boosting, K-Means
+</p>
+
+<a class="project-link" href="https://github.com/NematullahAmiri/IMF-World-Economic-Outlook--2026" target="_blank">
+View Project →
+</a>
 </div>
 </div>
+
+<!-- PROJECT 3 -->
 <div class="project-card">
-<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format" alt="Fraud">
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop" alt="Fraud detection analytics">
+
 <div class="project-content">
-<span class="project-tag">Fraud Detection</span>
-<h3>Financial Fraud Detection</h3>
-<ul class="project-list"><li>Fraud pipeline for imbalanced data</li><li>High precision/recall</li><li>Optimized thresholds</li></ul>
-<p class="tech-stack">Python, SMOTE, Random Forest</p>
-<a class="project-link" href="https://github.com/NematullahAmiri/Financial-Fraud-Detection" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+<div class="project-tag">Fraud Detection</div>
+
+<h3>Financial Fraud Detection System</h3>
+
+<ul class="project-list">
+<li>Built fraud detection pipeline for imbalanced transaction data</li>
+<li>Achieved high fraud precision and recall performance</li>
+<li>Optimized threshold strategies to reduce false positives</li>
+</ul>
+
+<p class="tech-stack">
+<strong>Tools:</strong> Python, XGBoost, SMOTE, Random Forest, SHAP
+</p>
+
+<a class="project-link" href="https://github.com/NematullahAmiri/Financial-Fraud-Detection" target="_blank">
+View Project →
+</a>
 </div>
 </div>
+
+<!-- PROJECT 4 -->
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" alt="Retail business analytics dashboard">
+
+<div class="project-content">
+<div class="project-tag">Business Intelligence</div>
+
+<h3>Online Retail Performance Analysis</h3>
+
+<ul class="project-list">
+<li>Analyzed 818K+ retail transactions across 43 countries</li>
+<li>Identified revenue leakage and customer concentration risks</li>
+<li>Delivered strategic recommendations for business growth</li>
+</ul>
+
+<p class="tech-stack">
+<strong>Tools:</strong> Python, Pandas, NumPy, Matplotlib, Jupyter
+</p>
+
+<a class="project-link" href="https://github.com/NematullahAmiri/Online-Retail-Performance-Analysis" target="_blank">
+View Project →
+</a>
+</div>
+</div>
+
 </div>
 </div>
 </section>
@@ -703,8 +725,12 @@ footer {
 <div class="container">
 <div class="cta">
 <h2>Let’s Work Together</h2>
-<p>Available for remote analytics projects, dashboard development, and business intelligence consulting.</p>
-<a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Start a Conversation</a>
+
+<p>
+Available for remote analytics projects, dashboard development, reporting automation, business intelligence consulting, and project analytics support.
+</p>
+
+<a href="#contact" class="btn btn-primary">Contact Me</a>
 </div>
 </div>
 </section>
@@ -713,49 +739,58 @@ footer {
 <section id="contact">
 <div class="container">
 <h2>Contact</h2>
-<p class="section-subtitle">Let's discuss your next analytics project</p>
+<p class="section-subtitle">
+Interested in working together or discussing a project? Feel free to connect.
+</p>
+
 <div class="contact-grid">
+
 <div class="contact-card">
-<h3><i class="fas fa-envelope"></i> Email</h3>
-<p><a href="mailto:nematullahamiri2@gmail.com">nematullahamiri2@gmail.com</a></p>
+<h3>Email</h3>
+<p>
+<a href="mailto:nematullahamiri2@gmail.com">
+nematullahamiri2@gmail.com
+</a>
+</p>
 </div>
+
 <div class="contact-card">
-<h3><i class="fab fa-linkedin"></i> LinkedIn</h3>
-<p><a href="https://www.linkedin.com/in/nematullah-amiri-12b50941" target="_blank">Connect on LinkedIn</a></p>
+<h3>LinkedIn</h3>
+<p>
+<a href="https://www.linkedin.com/in/nematullah-amiri-12b50941" target="_blank">
+View LinkedIn Profile
+</a>
+</p>
 </div>
+
 <div class="contact-card">
-<h3><i class="fab fa-github"></i> GitHub</h3>
-<p><a href="https://github.com/NematullahAmiri" target="_blank">Explore Projects</a></p>
+<h3>GitHub</h3>
+<p>
+<a href="https://github.com/NematullahAmiri" target="_blank">
+Explore GitHub Projects
+</a>
+</p>
 </div>
-<div class="contact-form">
-<h3>Send a Message</h3>
-<form action="#" method="post">
-<div class="form-group"><input type="text" placeholder="Your Name" required></div>
-<div class="form-group"><input type="email" placeholder="Email Address" required></div>
-<div class="form-group"><textarea rows="4" placeholder="Tell me about your project..."></textarea></div>
-<button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message <i class="fas fa-paper-plane"></i></button>
-</form>
+
+<div class="contact-card">
+<h3>WhatsApp</h3>
+<p>
+<a href="https://wa.me/93702721088" target="_blank">
+Chat on WhatsApp
+</a>
+</p>
 </div>
+
 </div>
 </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
 <footer>
-<p>© 2026 Nematullah Amiri | Business Intelligence & Project Analytics Consultant</p>
+<p>
+© 2026 Nematullah Amiri | Business Intelligence & Project Analytics Consultant
+</p>
 </footer>
 
-<script>
-// Smooth scroll with offset for sticky nav
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if(target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    });
-});
-</script>
 </body>
 </html>
