@@ -108,6 +108,27 @@ nav {
     align-items: center;
 }
 
+/* --- Profile picture style (new) --- */
+.profile-pic {
+    margin-bottom: 1.8rem;
+    text-align: left;
+}
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.5);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: #ffffff10;
+}
+.profile-pic img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+    border-color: rgba(255,255,255,0.8);
+}
+
 .hero h1 {
     font-size: 3.2rem;
     margin-bottom: 1.2rem;
@@ -381,6 +402,13 @@ footer {
     .hero h1 { font-size: 2.5rem; }
     .nav-wrapper { flex-direction: column; gap: 0.8rem; }
     .nav-links a { margin: 0 0.8rem; }
+    .profile-pic img {
+        width: 130px;
+        height: 130px;
+    }
+    .profile-pic {
+        text-align: center;
+    }
 }
 
 @media (max-width: 600px) {
@@ -390,6 +418,10 @@ footer {
     .hero-badges .badge { font-size: 0.7rem; }
     .btn { padding: 0.6rem 1.2rem; }
     .project-card img { height: 160px; }
+    .profile-pic img {
+        width: 110px;
+        height: 110px;
+    }
 }
 </style>
 </head>
@@ -409,34 +441,44 @@ footer {
 </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO SECTION with profile picture added -->
 <section class="hero">
 <div class="container hero-grid">
 <div>
-<h1>Business Intelligence & <span class="hero-highlight">Project Analytics</span> Consultant</h1>
-<p>Helping organizations transform operational data into strategic decisions through analytics, dashboards, forecasting, and reporting automation.</p>
-<div class="hero-badges">
-<span class="badge">PMP® Certified</span>
-<span class="badge">14+ Years Experience</span>
-<span class="badge">Data Analytics</span>
-<span class="badge">Business Intelligence</span>
-<span class="badge">PMO Strategy</span>
-</div>
-<div class="hero-buttons">
-<a href="#projects" class="btn btn-primary">View Portfolio</a>
-<a href="#contact" class="btn btn-outline">Hire Me</a>
-</div>
+    <!-- PROFILE PICTURE INSERTION: replace 'your-profile-photo.jpg' with your actual image file -->
+    <div class="profile-pic">
+        <img src="your-profile-photo.jpg" alt="Nematullah Amiri - Business Intelligence Consultant">
+        <!-- 💡 INSTRUCTION: Replace 'your-profile-photo.jpg' with the path to your picture.
+             Options:
+             1) Place your image inside the same folder (e.g., "profile.jpg") and set src="profile.jpg"
+             2) Use a full URL: src="https://yourdomain.com/images/me.jpg"
+             Recommended size: 400x400px for crisp display. The image will be cropped as a circle.
+        -->
+    </div>
+    <h1>Business Intelligence & <span class="hero-highlight">Project Analytics</span> Consultant</h1>
+    <p>Helping organizations transform operational data into strategic decisions through analytics, dashboards, forecasting, and reporting automation.</p>
+    <div class="hero-badges">
+        <span class="badge">PMP® Certified</span>
+        <span class="badge">14+ Years Experience</span>
+        <span class="badge">Data Analytics</span>
+        <span class="badge">Business Intelligence</span>
+        <span class="badge">PMO Strategy</span>
+    </div>
+    <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View Portfolio</a>
+        <a href="#contact" class="btn btn-outline">Hire Me</a>
+    </div>
 </div>
 <div class="hero-card">
-<h3>What I Help Organizations With</h3>
-<ul>
-<li>✔ Executive dashboards & KPI reporting</li>
-<li>✔ Data analytics & forecasting solutions</li>
-<li>✔ Project risk analysis & PMO reporting</li>
-<li>✔ Business intelligence & operational insights</li>
-<li>✔ Reporting automation & data transformation</li>
-<li>✔ Strategic analytics for decision-making</li>
-</ul>
+    <h3>What I Help Organizations With</h3>
+    <ul>
+        <li>✔ Executive dashboards & KPI reporting</li>
+        <li>✔ Data analytics & forecasting solutions</li>
+        <li>✔ Project risk analysis & PMO reporting</li>
+        <li>✔ Business intelligence & operational insights</li>
+        <li>✔ Reporting automation & data transformation</li>
+        <li>✔ Strategic analytics for decision-making</li>
+    </ul>
 </div>
 </div>
 </section>
