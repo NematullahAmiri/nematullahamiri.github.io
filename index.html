@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Nematullah Amiri | Business Intelligence & Project Analytics Consultant</title>
-<meta name="description" content="Business Intelligence and Project Analytics Consultant helping organizations transform data into strategic decisions through dashboards, forecasting, analytics, and reporting automation.">
+<meta name="description" content="Nematullah Amiri is a PMP-certified consultant working across data analytics, business intelligence, project analytics, public financial management, and development research.">
 <meta name="keywords" content="Business Intelligence, Data Analytics, Power BI, Project Analytics, Dashboard Development, SQL, Python, PMO, Forecasting">
 <meta name="author" content="Nematullah Amiri">
+<meta name="theme-color" content="#07152b">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -418,82 +419,213 @@ footer {
         height: 110px;
     }
 }
+
+/* ===== REFINEMENTS ===== */
+.logo {
+    text-decoration: none;
+    white-space: nowrap;
+}
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.15rem;
+}
+.nav-links a {
+    display: inline-block;
+    padding: 0.45rem 0.35rem;
+    border-radius: 8px;
+}
+.nav-links a:focus-visible,
+.btn:focus-visible,
+.project-link:focus-visible,
+.contact-card a:focus-visible,
+.btn-submit:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+.hero {
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+}
+.hero-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
+}
+.hero-main { min-width: 0; }
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    margin: 0 0 1.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255,255,255,0.92);
+    box-shadow: 0 18px 36px rgba(0,0,0,0.24);
+}
+.profile-pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.eyebrow {
+    margin-bottom: 0.8rem !important;
+    color: #bfdbfe !important;
+    font-size: 0.78rem !important;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+.hero h1 {
+    max-width: 760px;
+    font-size: clamp(2.25rem, 4vw, 3.65rem);
+    line-height: 1.12;
+}
+.hero .hero-intro {
+    max-width: 650px;
+    font-size: 1.08rem;
+}
+.hero-card h2 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+}
+.hero-card li {
+    position: relative;
+    padding-left: 1.35rem;
+}
+.hero-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #93c5fd;
+    font-weight: 800;
+}
+.hero-card-note {
+    margin: 1.3rem 0 0 !important;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 0.9rem !important;
+}
+.trust-card, .about-card, .service-card, .project-card, .contact-card, .form-container {
+    height: 100%;
+}
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+.project-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.project-link { align-self: flex-start; }
+.form-note {
+    margin-top: 0.8rem;
+    color: #64748b;
+    font-size: 0.82rem;
+}
+textarea { resize: vertical; }
+section[id] { scroll-margin-top: 95px; }
+@media (max-width: 950px) {
+    .hero { min-height: 0; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-card { margin-top: 0.5rem; }
+    .profile-pic { margin-left: auto; margin-right: auto; }
+    .hero-main { text-align: center; }
+    .hero-badges, .hero-buttons { justify-content: center; }
+    .hero .hero-intro { margin-left: auto; margin-right: auto; }
+}
+@media (max-width: 600px) {
+    .container { width: min(92%, 1200px); }
+    .nav-wrapper { align-items: center; }
+    .nav-links { justify-content: center; }
+    .nav-links a { margin: 0; font-size: 0.88rem; }
+    .hero { padding: 3.5rem 0; }
+    .hero h1 { font-size: clamp(2rem, 9vw, 2.7rem); }
+    .profile-pic { width: 136px; height: 136px; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card img { height: 190px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
 </style>
 </head>
 <body>
 
 <nav>
 <div class="container nav-wrapper">
-<div class="logo">Nematullah Amiri</div>
+<a class="logo" href="#home" aria-label="Nematullah Amiri home">Nematullah Amiri</a>
 <div class="nav-links">
+<a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
-<a href="https://www.linkedin.com/in/nematullah-amiri-12b50941" target="_blank">LinkedIn</a>
-<a href="https://github.com/NematullahAmiri" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/nematullah-amiri-12b50941" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a href="https://github.com/NematullahAmiri" target="_blank" rel="noopener noreferrer">GitHub</a>
 </div>
 </div>
 </nav>
 
 
+<main>
 <!-- HERO SECTION -->
-<section class="hero">
+<section class="hero" id="home">
     <div class="container hero-grid">
+        <div class="hero-main">
+            <div class="profile-pic">
+                <img
+                    src="Amiri_Photo.png"
+                    alt="Portrait of Nematullah Amiri"
+                    width="180"
+                    height="180"
+                    loading="eager"
+                >
+            </div>
 
-        <!-- Profile picture -->
-        <div class="profile-pic">
-            <img
-                src="Amiri_Photo.png"
-                alt="Nematullah Amiri — Data Science and Business Intelligence Consultant"
-                loading="eager"
-            >
+            <p class="eyebrow">DATA • INSIGHTS • DELIVERY</p>
+            <h1>Business Intelligence &amp; <span class="hero-highlight">Project Analytics</span> Consultant</h1>
+            <p class="hero-intro">
+                I help organizations turn operational and financial data into clearer decisions
+                through analytics, dashboards, forecasting, and performance reporting.
+            </p>
+
+            <div class="hero-badges" aria-label="Professional credentials and focus areas">
+                <span class="badge">PMP® Certified</span>
+                <span class="badge">14+ Years of Experience</span>
+                <span class="badge">Data Analytics</span>
+                <span class="badge">Business Intelligence</span>
+                <span class="badge">Project &amp; Risk Analytics</span>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                <a href="#contact" class="btn btn-outline">Discuss a Project</a>
+                <a href="https://www.linkedin.com/in/nematullah-amiri-12b50941"
+                   class="btn btn-outline" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+            </div>
         </div>
 
-        <!-- Hero content -->
-        <div class="hero-content">
-            <h1>Nematullah Amiri</h1>
-            <p class="hero-subtitle">
-                Data Science | Business Intelligence | Development Research | Project Management
-            </p>
-            <p>
-                I combine data analytics, financial management, and project leadership
-                to deliver evidence-based insights and practical solutions.
-            </p>
-        </div>
-
+        <aside class="hero-card" aria-label="Services overview">
+            <h2>How I Can Help</h2>
+            <ul>
+                <li>Executive dashboards and KPI reporting</li>
+                <li>Data analysis, forecasting, and predictive modeling</li>
+                <li>Project performance and risk analytics</li>
+                <li>Reporting automation and data transformation</li>
+                <li>Evidence-based research and decision support</li>
+            </ul>
+            <p class="hero-card-note">Focused on practical analysis, transparent methods, and useful outputs.</p>
+        </aside>
     </div>
-</section>
-
-
-</section>
-
-    <h1>Business Intelligence & <span class="hero-highlight">Project Analytics</span> Consultant</h1>
-    <p>Helping organizations transform operational data into strategic decisions through analytics, dashboards, forecasting, and reporting automation.</p>
-    <div class="hero-badges">
-        <span class="badge">PMP® Certified</span>
-        <span class="badge">14+ Years Experience</span>
-        <span class="badge">Data Analytics</span>
-        <span class="badge">Business Intelligence</span>
-        <span class="badge">PMO Strategy</span>
-    </div>
-    <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">View Portfolio</a>
-        <a href="#contact" class="btn btn-outline">Hire Me</a>
-    </div>
-</div>
-<div class="hero-card">
-    <h3>What I Help Organizations With</h3>
-    <ul>
-        <li>✔ Executive dashboards & KPI reporting</li>
-        <li>✔ Data analytics & forecasting solutions</li>
-        <li>✔ Project risk analysis & PMO reporting</li>
-        <li>✔ Business intelligence & operational insights</li>
-        <li>✔ Reporting automation & data transformation</li>
-        <li>✔ Strategic analytics for decision-making</li>
-    </ul>
-</div>
-</div>
 </section>
 
 <!-- TRUST SECTION -->
@@ -575,22 +707,22 @@ footer {
 
 <li>Evaluated models using Accuracy, Precision, Recall, F1-Score, ROC-AUC, Confusion Matrix, and Feature Importance analysis to ensure business-relevant performance.</li>
 
-<li>Selected Random Forest as the production model, achieving 84% accuracy and the best balance between precision and recall for churn identification.</li>
+<li>Selected Random Forest as the strongest evaluated model, with approximately 86.7% accuracy on the reported evaluation. Model choice should also consider recall, precision, and the cost of missed churn cases.</li>
 
-<li>Deployed a production-ready Streamlit web application that provides real-time churn prediction, churn probability estimation, and customer risk classification.</li>
+<li>Built a Streamlit application for interactive churn prediction, churn-probability estimates, and customer risk classification.</li>
 </ul>
 
 <p class="tech-stack">
 <strong>Tools:</strong> Python, Pandas, NumPy, Scikit-Learn, Random Forest, XGBoost, Streamlit, Joblib, Matplotlib, Seaborn
 </p>
 
-<a class="project-link" href="https://github.com/NematullahAmiri/customer-churn-prediction" target="_blank">
+<a class="project-link" href="https://github.com/NematullahAmiri/customer-churn-prediction" target="_blank" rel="noopener noreferrer">
 GitHub Repository →
 </a>
 
 <br><br>
 
-<a class="project-link" href="https://customer-churn-prediction-nknr2nla9wzs7rvfuulvri.streamlit.app/#customer-churn-prediction-system" target="_blank">
+<a class="project-link" href="https://customer-churn-prediction-nknr2nla9wzs7rvfuulvri.streamlit.app/#customer-churn-prediction-system" target="_blank" rel="noopener noreferrer">
 Live Application →
 </a>
 
@@ -610,20 +742,20 @@ Live Application →
 <li>Analyzed 54,808 employee records across departments, regions, education levels, training performance, and career history.</li>
 <li>Engineered predictive features and evaluated Logistic Regression, Random Forest, and XGBoost models.</li>
 <li>Optimized model performance through hyperparameter tuning, cross-validation, threshold optimization, and SHAP explainability analysis.</li>
-<li>Achieved 82.2% ROC-AUC and deployed a production-ready Streamlit web application for real-time promotion prediction.</li>
+<li>Achieved a tuned ROC-AUC of approximately 0.822 and built a Streamlit application for interactive promotion-risk predictions.</li>
 </ul>
 
 <p class="tech-stack">
 <strong>Tools:</strong> Python, Pandas, NumPy, Scikit-Learn, XGBoost, SHAP, Streamlit, Joblib, Matplotlib, Seaborn
 </p>
 
-<a class="project-link" href="https://github.com/NematullahAmiri/employee-promotion-prediction" target="_blank">
+<a class="project-link" href="https://github.com/NematullahAmiri/employee-promotion-prediction" target="_blank" rel="noopener noreferrer">
 GitHub Repository →
 </a>
 
 <br><br>
 
-<a class="project-link" href="https://employee-promotion-prediction-eq4g66rt6fpqn7ximhkrzx.streamlit.app/" target="_blank">
+<a class="project-link" href="https://employee-promotion-prediction-eq4g66rt6fpqn7ximhkrzx.streamlit.app/" target="_blank" rel="noopener noreferrer">
 Live Application →
 </a>
 
@@ -645,7 +777,7 @@ Live Application →
 <li>Prescriptive investment framework including volatility-targeted position sizing, dynamic stop-losses, and quarterly portfolio rebalancing</li>
 </ul>
 <p class="tech-stack"><strong>Tools:</strong> Python, Pandas, NumPy, Statsmodels, Arch, Scikit-learn, Matplotlib, Seaborn, SciPy</p>
-<a class="project-link" href="https://github.com/NematullahAmiri/US-Stock-Market-Analysis" target="_blank">View Project →</a>
+<a class="project-link" href="https://github.com/NematullahAmiri/US-Stock-Market-Analysis" target="_blank" rel="noopener noreferrer">View Project →</a>
 </div>
 </div>
     
@@ -661,7 +793,7 @@ Live Application →
 <li>Analyzed key drivers impacting project performance</li>
 </ul>
 <p class="tech-stack"><strong>Tools:</strong> Python, Scikit-learn, XGBoost, Random Forest, SHAP</p>
-<a class="project-link" href="https://github.com/NematullahAmiri/project-risk-prediction" target="_blank">View Project →</a>
+<a class="project-link" href="https://github.com/NematullahAmiri/project-risk-prediction" target="_blank" rel="noopener noreferrer">View Project →</a>
 </div>
 </div>
 
@@ -677,7 +809,7 @@ Live Application →
 <li>Delivered policy-oriented analytical recommendations</li>
 </ul>
 <p class="tech-stack"><strong>Tools:</strong> Python, Pandas, Scikit-learn, Gradient Boosting, K-Means</p>
-<a class="project-link" href="https://github.com/NematullahAmiri/IMF-World-Economic-Outlook--2026" target="_blank">View Project →</a>
+<a class="project-link" href="https://github.com/NematullahAmiri/IMF-World-Economic-Outlook--2026" target="_blank" rel="noopener noreferrer">View Project →</a>
 </div>
 </div>
 
@@ -693,7 +825,7 @@ Live Application →
 <li>Optimized threshold strategies to reduce false positives</li>
 </ul>
 <p class="tech-stack"><strong>Tools:</strong> Python, XGBoost, SMOTE, Random Forest, SHAP</p>
-<a class="project-link" href="https://github.com/NematullahAmiri/Financial-Fraud-Detection" target="_blank">View Project →</a>
+<a class="project-link" href="https://github.com/NematullahAmiri/Financial-Fraud-Detection" target="_blank" rel="noopener noreferrer">View Project →</a>
 </div>
 </div>
 
@@ -709,7 +841,7 @@ Live Application →
 <li>Delivered strategic recommendations for business growth</li>
 </ul>
 <p class="tech-stack"><strong>Tools:</strong> Python, Pandas, NumPy, Matplotlib, Jupyter</p>
-<a class="project-link" href="https://github.com/NematullahAmiri/Online-Retail-Performance-Analysis" target="_blank">View Project →</a>
+<a class="project-link" href="https://github.com/NematullahAmiri/Online-Retail-Performance-Analysis" target="_blank" rel="noopener noreferrer">View Project →</a>
 </div>
 </div>
 </div>
@@ -734,26 +866,49 @@ Live Application →
 <p class="section-subtitle">Interested in working together or discussing a project? Feel free to connect or send a message.</p>
 <div class="contact-grid">
 <div class="contact-card"><h3>Email</h3><p><a href="mailto:nemat_2929@yahoo.com">nemat_2929@yahoo.com</a></p></div>
-<div class="contact-card"><h3>LinkedIn</h3><p><a href="https://www.linkedin.com/in/nematullah-amiri-12b50941" target="_blank">View Profile</a></p></div>
-<div class="contact-card"><h3>GitHub</h3><p><a href="https://github.com/NematullahAmiri" target="_blank">Explore Projects</a></p></div>
-<div class="contact-card"><h3>WhatsApp</h3><p><a href="https://wa.me/93702721088" target="_blank">Chat on WhatsApp</a></p></div>
+<div class="contact-card"><h3>LinkedIn</h3><p><a href="https://www.linkedin.com/in/nematullah-amiri-12b50941" target="_blank" rel="noopener noreferrer">View Profile</a></p></div>
+<div class="contact-card"><h3>GitHub</h3><p><a href="https://github.com/NematullahAmiri" target="_blank" rel="noopener noreferrer">Explore Projects</a></p></div>
+<div class="contact-card"><h3>WhatsApp</h3><p><a href="https://wa.me/93702721088" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p></div>
 </div>
 <div class="form-container" style="margin-top: 2.5rem;">
-<form action="#" method="post">
+<form id="contact-form">
 <h3 style="margin-bottom: 1.2rem;">Send a Message</h3>
 <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
 <div class="form-group"><input type="email" name="email" placeholder="Your Email" required></div>
 <div class="form-group"><textarea rows="4" name="message" placeholder="Your Message" required></textarea></div>
 <button type="submit" class="btn-submit">Send Message →</button>
-<p style="font-size: 0.75rem; margin-top: 0.8rem; color: #64748b;">* This form currently sends an email to the address above (you can connect a backend service).</p>
+<p class="form-note">Submitting this form opens your email application with a prepared message. It does not send the message automatically.</p>
 </form>
 </div>
 </div>
 </section>
 
+</main>
+
 <footer>
 <p>© 2026 Nematullah Amiri | Business Intelligence & Project Analytics Consultant</p>
 </footer>
 
+<script>
+/* This static GitHub Pages form prepares an email; it does not require a server. */
+document.getElementById("contact-form")?.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const name = form.elements.name.value.trim();
+    const email = form.elements.email.value.trim();
+    const message = form.elements.message.value.trim();
+
+    if (!name || !email || !message) {
+        form.reportValidity();
+        return;
+    }
+
+    const subject = encodeURIComponent("Portfolio enquiry from " + name);
+    const body = encodeURIComponent(
+        "Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message
+    );
+    window.location.href = "mailto:nemat_2929@yahoo.com?subject=" + subject + "&body=" + body;
+});
+</script>
 </body>
 </html>
